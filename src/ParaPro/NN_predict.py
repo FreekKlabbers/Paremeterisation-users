@@ -71,7 +71,7 @@ class NN_predictor:
         y_pred = self.target_scaler.inverse_transform(
             y_pred_scaled.cpu().numpy().reshape(-1, 1)
         ).ravel()
-        return y_pred
+        return np.exp(y_pred)  # Return the predictions in the original scale
 
     @staticmethod
     def load_preprocessor(
