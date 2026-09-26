@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# repo specefic
+src/ParaPro/assets
+/.vscode

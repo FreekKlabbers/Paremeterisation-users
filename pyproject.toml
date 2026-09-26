@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ParaPro"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "huggingface-hub",
+    "scikit-learn == 1.7.2",
+    "pandas",
+    "numpy",
+]
+
+[project.optional-dependencies]
+notebook = ["ipykernel"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
